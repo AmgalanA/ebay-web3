@@ -6709,7 +6709,7 @@
   "resolved" "https://registry.npmjs.org/next-tick/-/next-tick-1.1.0.tgz"
   "version" "1.1.0"
 
-"next@latest":
+"next@^13.0.0":
   "integrity" "sha512-puH1WGM6rGeFOoFdXXYfUxN9Sgi4LMytCV5HkQJvVUOhHfC1DoVqOfvzaEteyp6P04IW+gbtK2Q9pInVSrltPA=="
   "resolved" "https://registry.npmjs.org/next/-/next-13.0.0.tgz"
   "version" "13.0.0"
