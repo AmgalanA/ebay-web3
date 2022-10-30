@@ -6,12 +6,16 @@ import {
   useContract,
   MediaRenderer,
 } from "@thirdweb-dev/react";
+import Link from "next/link";
 import { ListingType } from "@thirdweb-dev/sdk";
 
 import Header from "../components/Header";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const { push } = useRouter();
+
   const { contract } = useContract(
     process.env.NEXT_PUBLIC_MARKETPLACE_CONTRACT,
     "marketplace"
@@ -33,6 +37,7 @@ const Home: NextPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto">
             {listings?.map((listing) => (
               <div
+                onClick={() => push(`/listing/${listing.id}`)}
                 className="flex flex-col card hover:scale-105 transition-all duration-150 ease-out"
                 key={listing.id}
               >
